@@ -9,6 +9,7 @@
 - MYSQL_PASSWORD: MySQL 비밀번호
 - MYSQL_DATABASE: MySQL Database 이름
 - MYSQL_HOST: MySQL 주소
+- DATABASE_URL: Prisma 연결용 Database 주소
 - PASSWORD_HASH_SALT_ROUNDS: bcrypt salt 보안 강도 (숫자가 높으면 보안은 강화되지만 시간이 오래 걸림)
 - JWT_ACCESS_TOKEN_SECRET: JWT AccessToken 비밀번호
 
@@ -20,8 +21,9 @@ MYSQL_USERNAME="root"
 MYSQL_PASSWORD="rootpassword"
 MYSQL_DATABASE="sparta_nodejs_db"
 MYSQL_HOST="aws.rds.com"
+DATABASE_URL="mysql://root:rootpassword@aaa.ap-northeast-2.rds.amazonaws.com:3306/nodejs-advance"
 PASSWORD_HASH_SALT_ROUNDS=10
-JWT_ACCESS_TOKEN_SECRET="jwt-serect-key"
+JWT_ACCESS_TOKEN_SECRET="jwt-select-key"
 ```
 
 # 실행 방법

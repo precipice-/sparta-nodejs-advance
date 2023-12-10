@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { JWT_ACCESS_TOKEN_SECRET } from '../../constants/security.costant.js';
+import { JWT_ACCESS_TOKEN_SECRET } from 'dotenv/config';
 import db from '../../models/index.cjs';
 const { Users } = db;
 
