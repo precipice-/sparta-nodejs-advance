@@ -5,5 +5,12 @@ export default function (err, req, res, next) {
   console.error(err);
 
   // 클라이언트에게 에러 메시지를 전달합니다.
-  res.status(500).json({ errorMessage: '서버 내부 에러가 발생했습니다.' });
+  const statusCode = err.statusCode ?? 500;
+  const message =
+    err.message ?? '예상치 못한 에러가 발생하였습니다. 관리자에게 문의하세요.';
+
+  return res.status(statusCode).json({
+    success: false,
+    message,
+  });
 }
