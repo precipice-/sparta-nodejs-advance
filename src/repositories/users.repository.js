@@ -17,12 +17,12 @@ export class UsersRepository {
   readOneById = async (id) => {
     const user = await prisma.users.findUnique({ where: { id } });
 
-    return user?.toJSON();
+    return user;
   };
 
   readOneByEmail = async (email) => {
     const user = await prisma.users.findUnique({ where: { email } });
 
-    return user?.toJSON();
+    return user;
   };
 }

@@ -1,4 +1,4 @@
-import { ProductsRepository } from '../repositories/products.repository';
+import { ProductsRepository } from '../repositories/products.repository.js';
 import * as HttpStatus from '../errors/http-status.error.js';
 
 export class ProductsService {

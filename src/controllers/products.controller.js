@@ -1,4 +1,4 @@
-import { ProductsService } from '../services/products.service';
+import { ProductsService } from '../services/products.service.js';
 
 export class ProductsController {
   constructor() {
@@ -137,7 +137,7 @@ export class ProductsController {
       const { id: userId, name: userName } = res.locals.user;
 
       const data = await this.productsService.deleteOne({
-        id: productId,
+        id: +productId,
         userId,
         userName,
       });

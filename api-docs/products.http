@@ -1,5 +1,5 @@
 @host = http://localhost:3000/api/products
-@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImlhdCI6MTY5OTg3MjMxOSwiZXhwIjoxNjk5OTE1NTE5fQ.YwbcoCvUWWgfkLmVL8mIm1MkiZxPaV_rZ-krRv5g9Js
+@accessToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwMzIyNzQwNiwiZXhwIjoxNzAzMjcwNjA2fQ.yQZZflmTi_vKdL4bfl_HKpMAZuvU_YZXHdjukNbI1cg
 
 
 ### 상품 생성

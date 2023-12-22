@@ -13,7 +13,7 @@ export class AuthService {
   }
 
   signup = async ({ email, name, password }) => {
-    const existedUser = await this.usersRepository.readOneByEmail({ email });
+    const existedUser = await this.usersRepository.readOneByEmail(email);
 
     if (existedUser) {
       throw new HttpStatus.BadRequest('이미 가입 된 이메일입니다.');

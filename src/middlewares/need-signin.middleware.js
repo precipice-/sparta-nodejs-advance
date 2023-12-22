@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { JWT_ACCESS_TOKEN_SECRET } from 'dotenv/config';
+import { JWT_ACCESS_TOKEN_SECRET } from '../../constants/security.costant.js';
 import { UsersRepository } from '../repositories/users.repository.js';
 
 const usersRepository = new UsersRepository();
