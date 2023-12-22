@@ -1,7 +1,8 @@
 import jwt from 'jsonwebtoken';
 import { JWT_ACCESS_TOKEN_SECRET } from 'dotenv/config';
-import db from '../../models/index.cjs';
-const { Users } = db;
+import { UsersRepository } from '../repositories/users.repository.js';
+
+const usersRepository = new UsersRepository();
 
 export const needSignin = async (req, res, next) => {
   try {
@@ -34,7 +35,7 @@ export const needSignin = async (req, res, next) => {
     const { userId } = decodedPayload;
 
     // 일치 하는 userId가 없는 경우
-    const user = (await Users.findByPk(userId)).toJSON();
+    const user = await usersRepository.readOneById(userId);
 
     if (!user) {
       return res.status(400).json({

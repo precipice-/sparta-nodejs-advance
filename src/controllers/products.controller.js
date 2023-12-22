@@ -68,7 +68,7 @@ export class ProductsController {
     try {
       const { productId } = req.params;
 
-      const product = await this.productsService.readOne({ productId });
+      const product = await this.productsService.readOne({ id: +productId });
 
       if (!product) {
         return res.status(404).json({
@@ -115,7 +115,7 @@ export class ProductsController {
       const data = await this.productsService.updateOne({
         userId,
         userName,
-        productId,
+        id: +productId,
         title,
         description,
         status,
