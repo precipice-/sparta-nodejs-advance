@@ -1,7 +1,4 @@
 import { ProductsService } from '../services/products.service';
-import db from '../../models/index.cjs';
-const { Products, Users } = db;
-import { Sequelize } from 'sequelize';
 
 export class ProductsController {
   constructor() {

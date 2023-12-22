@@ -1,7 +1,4 @@
 import { ProductsRepository } from '../repositories/products.repository';
-import { Sequelize } from 'sequelize';
-import db from '../../models/index.cjs';
-const { Products, Users } = db;
 import * as HttpStatus from '../errors/http-status.error.js';
 
 export class ProductsService {
